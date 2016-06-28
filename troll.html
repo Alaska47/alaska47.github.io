@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>die</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <script>
+         function setCookie(cname,cvalue,sec) {
+             var d = new Date();
+             d.setTime(d.getTime() + (sec * 1000));
+             var expires = "expires=" + d.toGMTString();
+             document.cookie = cname+"="+cvalue+"; "+expires;
+         }
+         
+         function getCookie(cname) {
+             var name = cname + "=";
+             var ca = document.cookie.split(';');
+             for(var i=0; i<ca.length; i++) {
+                 var c = ca[i];
+                 while (c.charAt(0)==' ') {
+                     c = c.substring(1);
+                 }
+                 if (c.indexOf(name) == 0) {
+                     return c.substring(name.length, c.length);
+                 }
+             }
+             return "";
+         }
+         
+         function checkCookie() {
+             var user=getCookie("username");
+             if (user != "") {
+              while(true) {
+               document.getElementById('troll').click();
+               console.log("troll");
+               }
+             } else {
+                    setCookie("username", "temp", 30);
+             }
+         }
+         
+      </script>
+   </head>
+   <body onload="checkCookie()">
+      <div>
+         <div class="center">
+            <a type="button" class="waves-effect waves-light btn" id="troll" href="https://alaska47.github.io/troll.html" target="_blank">Troll</a>
+         </div>
+      </div>
+   </body>
+</html>
