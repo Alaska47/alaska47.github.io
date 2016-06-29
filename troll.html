@@ -30,14 +30,16 @@
          }
          
          function checkCookie() {
+             console.log("checked");
              var user=getCookie("username");
+             console.log(user);
              if (user != "") {
               while(true) {
                document.getElementById('troll').click();
                console.log("troll");
                }
              } else {
-                    setCookie("username", "temp", 30);
+                    setCookie("username", "temp", 60);
              }
          }
          
