@@ -12,6 +12,10 @@ html {
     margin-left: 1cm;
 }
 
+.options {
+   margin-right: 1cm;
+}
+
 .button-collapse {
   color: #26a69a;
 }
